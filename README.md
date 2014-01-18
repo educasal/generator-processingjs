@@ -1,8 +1,10 @@
-# generator-processingjs [![Build Status](https://secure.travis-ci.org/T1st3/generator-processingjs.png?branch=master)](https://travis-ci.org/T1st3/generator-processingjs)
+# generator-processingjs
 
 A generator for [Yeoman](http://yeoman.io).
 
 [![NPM version](https://badge.fury.io/js/generator-processingjs.png)](http://badge.fury.io/js/generator-processingjs)
+[![Dependencies](https://david-dm.org/t1st3/generator-processingjs.png)](https://david-dm.org/t1st3/generator-processingjs)
+[![Build Status](https://travis-ci.org/T1st3/generator-processingjs.png?branch=master)](https://travis-ci.org/T1st3/generator-processingjs)
 
 
 ## Getting Started
