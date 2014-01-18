@@ -2,6 +2,8 @@
 
 A generator for [Yeoman](http://yeoman.io).
 
+[![NPM version](https://badge.fury.io/js/generator-processingjs.png)](http://badge.fury.io/js/generator-processingjs)
+
 
 ## Getting Started
 
