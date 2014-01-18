@@ -22,24 +22,36 @@ ProcessingjsGenerator.prototype.askFor = function askFor() {
   // have Yeoman greet the user.
   console.log(this.yeoman);
 
-  var prompts = [{
-    type: 'confirm',
-    name: 'someOption',
-    message: 'Would you like to enable this option?',
-    default: true
-  }];
+  var prompts = [
+		{
+			name: 'githubAccount',
+			message: 'What is your github account?'
+		},
+		{
+			name: 'projectName',
+			message: 'What is the name of your Processing JS project (the slug-name of the Github repository)?'
+		},
+		{
+			name: 'projectVersion',
+			message: 'What is the version of your project?'
+		}
+	];
 
-  this.prompt(prompts, function (props) {
-    this.someOption = props.someOption;
-
-    cb();
-  }.bind(this));
+	this.prompt(prompts, function (props) {
+		this.githubAccount = props.githubAccount;
+		this.projectName = props.projectName;
+		this.projectVersion = props.projectVersion;
+		cb();
+	}.bind(this));
 };
 
 ProcessingjsGenerator.prototype.app = function app() {
-  this.mkdir('app');
-  this.mkdir('app/templates');
+  this.mkdir('src');
+	this.template('src/_processingjs-project.js', 'src/' + this.projectName + '.js');
 
+	this.mkdir('dist');
+	this.mkdir('doc');
+	
   this.template('_package.json', 'package.json');
   this.template('_bower.json', 'bower.json');
 	this.copy('bowerrc', '.bowerrc');

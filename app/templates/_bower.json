@@ -1,6 +1,7 @@
 {
-  "name": "package",
-  "version": "0.0.0",
+  "name": "<%= projectName %>",
+	"version": "<%= projectVersion %>",
+	"main": "dist/<%= _.slugify(projectName) %>.min.js",
   "dependencies": {
 		"processingjs": "*"
 	}

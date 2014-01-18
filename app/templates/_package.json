@@ -1,6 +1,6 @@
 {
 	"name": "<%= projectName %>",
-	"version": "<%= moduleVersion %>",
+	"version": "<%= projectVersion %>",
 	"main": "dist/<%= _.slugify(projectName) %>.min.js",
 	"dependencies": {
 		
