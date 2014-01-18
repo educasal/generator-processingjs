@@ -1,6 +1,7 @@
 {
-	"name": "package",
-	"version": "0.1.0",
+	"name": "<%= projectName %>",
+	"version": "<%= moduleVersion %>",
+	"main": "dist/<%= _.slugify(projectName) %>.min.js",
 	"dependencies": {
 		
 	},
@@ -13,5 +14,21 @@
 		"grunt-contrib-uglify": "~0.2.7",
 		"grunt-contrib-copy": "~0.5.0",
 		"grunt-jsdoc": "~0.5.1"
-	}
+	},
+	"ignore": [
+		"node_modules",
+		"bower_components",
+		"example",
+		".git",
+		".gitignore",
+		".jshintrc",
+		"Gruntfile.js",
+		"package.json"
+	],
+	"keywords": [
+		"processing",
+		"pde",
+		"canvas",
+		"processingjs"
+	]
 }
