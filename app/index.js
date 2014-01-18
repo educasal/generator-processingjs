@@ -54,6 +54,7 @@ ProcessingjsGenerator.prototype.app = function app() {
 	
   this.template('_package.json', 'package.json');
   this.template('_bower.json', 'bower.json');
+	this.template('_README.md', 'README.md');
 	this.copy('bowerrc', '.bowerrc');
 	this.copy('gitignore', '.gitignore');
 	this.copy('gitattributes', '.gitattributes');
