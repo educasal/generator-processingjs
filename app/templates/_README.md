@@ -6,7 +6,7 @@ About
 
 URL: [https://github.com/<%= githubAccount %>/<%= projectName %>](https://github.com/<%= githubAccount %>/<%= projectName %>)
 
-Author: <%= githubAccount %>
+Author: [<%= githubAccount %>](https://github.com/<%= githubAccount %>)
 
 Version: <%= projectVersion %>
 
