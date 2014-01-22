@@ -58,11 +58,27 @@ module.exports = function (grunt) {
 			options: {
 				config: '.jscs.json'
 			}
+		},
+		version: {
+			js: {
+				options: {
+					prefix: '@version\\s*'
+				},
+				src: ['src/**/*.js']
+			},
+			json: {
+				options: {
+					prefix: '"version":\\s"*'
+				},
+				src: ['bower.json']
+			}
 		}
 	});
 
 	// Register tasks
 	grunt.registerTask('build', [
+		'version:js',
+		'version:json',
 		'jshint',
 		'jscs',
 		'uglify',
