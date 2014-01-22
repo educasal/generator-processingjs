@@ -2,6 +2,8 @@
 
 module.exports = function (grunt) {
 	
+	require('time-grunt')(grunt);
+	
 	require('load-grunt-tasks')(grunt, {
 		scope: 'devDependencies',
 		config: 'package.json',
