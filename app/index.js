@@ -30,17 +30,12 @@ ProcessingjsGenerator.prototype.askFor = function askFor() {
 		{
 			name: 'projectName',
 			message: 'What is the name of your Processing JS project (the slug-name of the Github repository)?'
-		},
-		{
-			name: 'projectVersion',
-			message: 'What is the version of your project?'
 		}
 	];
 
 	this.prompt(prompts, function (props) {
 		this.githubAccount = props.githubAccount;
 		this.projectName = props.projectName;
-		this.projectVersion = props.projectVersion;
 		cb();
 	}.bind(this));
 };
@@ -53,6 +48,7 @@ ProcessingjsGenerator.prototype.app = function app() {
 	this.mkdir('doc');
 	
   this.template('_package.json', 'package.json');
+	this.template('_gruntfile.js', 'Gruntfile.js');
   this.template('_bower.json', 'bower.json');
 	this.template('_README.md', 'README.md');
 	this.copy('bowerrc', '.bowerrc');

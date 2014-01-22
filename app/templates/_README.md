@@ -8,8 +8,6 @@ URL: [https://github.com/<%= githubAccount %>/<%= projectName %>](https://github
 
 Author: [<%= githubAccount %>](https://github.com/<%= githubAccount %>)
 
-Version: <%= projectVersion %>
-
 
 
 Build from source
