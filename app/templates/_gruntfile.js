@@ -52,12 +52,19 @@ module.exports = function (grunt) {
 					destination: 'doc'
 				}
 			}
+		},
+		jscs: {
+			src: ['src/**/*.js', 'Gruntfile.js', 'example/app.js'],
+			options: {
+				config: '.jscs.json'
+			}
 		}
 	});
 
 	// Register tasks
 	grunt.registerTask('build', [
 		'jshint',
+		'jscs',
 		'uglify',
 		'copy:main',
 		'jsdoc:dist'
