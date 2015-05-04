@@ -3,6 +3,6 @@
 	"version": "0.1.0",
 	"main": "dist/<%= projectName %>.min.js",
   "dependencies": {
-		"processingjs": "*"
+		"processing-js": "*"
 	}
 }
